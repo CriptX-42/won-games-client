@@ -17,7 +17,7 @@ describe('<Button />', () => {
     renderWithTheme(<Button size="small">Buy now</Button>)
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
       height: '3rem',
-      'font-size':'0.2rem',
+      'font-size':'1.2rem',
     })
   })
 
