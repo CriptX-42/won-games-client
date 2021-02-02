@@ -18,7 +18,7 @@ describe('<Button />', () => {
         background: linear-gradient(180deg,#ff5f5f 0%,#f062c0 50%);
         color: #FAFAFA;
         border: 0;
-        curson: pointer;
+        cursor: pointer;
         border-radius: 0.4rem;
         padding: 0.8rem;
         height: 4rem;

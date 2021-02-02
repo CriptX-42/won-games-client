@@ -9,17 +9,17 @@ import Logo from 'components/Logo'
 const Menu = () => (
   <S.Wrapper>
     <S.IconWrapper>
-      <MenuIcon />
+      <MenuIcon arial-label="Open Menu" />
     </S.IconWrapper>
     <S.LogoWrapper>
       <Logo hideOnMobile />
     </S.LogoWrapper>
     <S.MenuGroup>
       <S.IconWrapper>
-        <SearchIcon />
+        <SearchIcon arial-label="Search" />
       </S.IconWrapper>
       <S.IconWrapper>
-        <ShoppingCartIcon />
+        <ShoppingCartIcon arial-label="open Shopping Cart" />
       </S.IconWrapper>
     </S.MenuGroup>
   </S.Wrapper>
