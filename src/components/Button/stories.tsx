@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { AddshoppingCart } from "@styled-icons/material/AddShoppingCart";
+import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
 import Button from '.'
 
 export default {
@@ -9,7 +9,7 @@ export default {
     children: {
       type: 'string'
     },
-    icons: {
+    icon: {
       type: ''
     }
   }
@@ -26,5 +26,5 @@ export const withIcon: Story = (args) => <Button {...args} />
 withIcon.args = {
   size: 'small',
   children: 'Buy now',
-  icon: <AddshoppingCart />
+  icon: <AddShoppingCart />
 }

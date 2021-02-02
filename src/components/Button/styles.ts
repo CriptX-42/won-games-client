@@ -1,7 +1,9 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import { ButtonProps } from '.'
 
-type WrapperProps = { hasIcon:boolean } & Pick<ButtonProps, 'size' | 'fullWidth'>
+type WrapperProps = {
+  hasIcon: boolean
+} & Pick<ButtonProps, 'size' | 'fullWidth'>
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
@@ -23,9 +25,9 @@ const wrapperModifiers = {
   `,
   withIcon: (theme: DefaultTheme) => css`
     display: inline-flex;
-    aligh-items: center;
+    align-items: center;
     justify-content: center;
-    svg: {
+    svg {
       width: 1.5rem;
       & + span {
         margin-left: ${theme.spacings.xxsmall};
@@ -39,6 +41,7 @@ export const Wrapper = styled.button<WrapperProps>`
     background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
     color: ${theme.colors.white};
     border: 0;
+    cursor: pointer;
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
     ${!!size && wrapperModifiers[size](theme)};
