@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media, { DefaultBreakpoints } from "styled-media-query";
+import media, { DefaultBreakpoints } from 'styled-media-query'
 
 type breackPoint = keyof DefaultBreakpoints
 export type MediaMatchProps = {
