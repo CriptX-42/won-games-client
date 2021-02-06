@@ -4,10 +4,10 @@ import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outline
 import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
-import Logo from 'components/Logo'
-import * as S from './styles'
 import Button from 'components/Button'
-import MediaMatch from "components/MediaMatch";
+import Logo from 'components/Logo'
+import MediaMatch from 'components/MediaMatch'
+import * as S from './styles'
 
 export type MenuProps = {
   username?: string
@@ -42,9 +42,9 @@ const Menu = ({ username }: MenuProps) => {
         <S.IconWrapper>
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconWrapper>
-        {!!username && (
+        {!username && (
           <MediaMatch greaterThan="medium">
-            <Button>Sigh In</Button>
+            <Button>Sign in</Button>
           </MediaMatch>
         )}
       </S.MenuGroup>
@@ -54,6 +54,7 @@ const Menu = ({ username }: MenuProps) => {
         <S.MenuNav>
           <S.MenuLink href="#">Home</S.MenuLink>
           <S.MenuLink href="#">Explore</S.MenuLink>
+
           {!!username && (
             <>
               <S.MenuLink href="#">My account</S.MenuLink>
@@ -61,6 +62,7 @@ const Menu = ({ username }: MenuProps) => {
             </>
           )}
         </S.MenuNav>
+
         {!username && (
           <S.RegisterBox>
             <Button fullWidth size="large">

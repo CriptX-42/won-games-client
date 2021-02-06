@@ -40,12 +40,11 @@ export const MenuGroup = styled.div`
 `
 
 export const MenuNav = styled.div`
-    ${({ theme }) => css`
-      ${media.greaterThan('medium')`
-			  margin-left: ${theme.spacings.small};
-	  	`}
-    `
-  }
+  ${({ theme }) => css`
+    ${media.greaterThan('medium')`
+			margin-left: ${theme.spacings.small};
+		`}
+  `}
 `
 
 export const MenuLink = styled.a`
@@ -95,8 +94,8 @@ export const MenuFull = styled.nav<MenuFullProps>`
     left: 0;
     right: 0;
     height: 100vh;
-    transition: opacity 0.3s ease-in-out;
     overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
     > svg {
