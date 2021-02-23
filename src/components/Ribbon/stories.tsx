@@ -9,7 +9,7 @@ export default {
   },
   argTypes: {
     children: {
-      types: 'string'
+      type: 'string'
     }
   }
 } as Meta
