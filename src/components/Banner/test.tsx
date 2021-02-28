@@ -42,6 +42,6 @@ describe('<Banner />', () => {
     expect(ribbon).toHaveStyle({
       backgroundColor: '#3CD3C1'
     })
-    expect(ribbon).toHaveStyle({ height: '3.6rem', fontSize: '1.4rem' })
+    expect(ribbon).toHaveStyle({ height: '2.6rem', fontSize: '1.4rem' })
   })
 })
