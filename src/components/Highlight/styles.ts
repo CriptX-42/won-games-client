@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
   ${({ theme, backgroundImage }) => css`
     position: relative;
     height: 23rem;
-    background-image: url(${backgroundImage})
+    background-image: url(${backgroundImage});
     display: grid;
 
     &::after {
