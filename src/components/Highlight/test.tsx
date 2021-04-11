@@ -34,7 +34,7 @@ describe('<Highlight />', () => {
   })
 
   it('should render float image', () => {
-    renderWithTheme(<Highlight {...props} floatImage="/float-image.png" />)
+    renderWithTheme(<Highlight {...props} floatImage="/float-image.svg" />)
      expect(screen.getByRole('img', {name: props.title})).toHaveAttribute(
        'src',
        '/float-image.svg'

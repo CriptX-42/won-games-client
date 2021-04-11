@@ -32,7 +32,7 @@ describe('<Ribbon />', () => {
 
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
       height: '3.6rem',
-      fontSize: '1.4rem'
+      fontSize: '2.6rem'
     })
   })
 
