@@ -15,7 +15,7 @@ const Highlight = ({
   title,
   subtitle,
   buttonLabel,
-  floatImage
+  floatImage,
   buttonLink,
   backgroundImage
 }: HighlightProps) => (
