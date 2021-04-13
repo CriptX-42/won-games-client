@@ -26,7 +26,7 @@ describe('<Highlight />', () => {
     expect(screen.getByRole('link', { name: /buy now/i })).toBeInTheDocument()
   })
 
-  it('should render headings and button', () => {
+  it('should render background image', () => {
     const { container } = renderWithTheme(<Highlight {...props} />)
      expect(container.firstChild).toHaveStyle({
        backgroundImage: `url(${props.backgroundImage})`
