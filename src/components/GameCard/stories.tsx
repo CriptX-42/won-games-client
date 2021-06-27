@@ -5,10 +5,10 @@ export default {
   title: 'GameCard',
   component: GameCard,
   args: {
-    title: 'Skyrim',
-    developer: 'Bethesda',
-    img: 'img',
-    price: 'R$ 200,00'
+    title: 'Population Zero',
+    developer: 'Rockstar Games',
+    img: 'https://source.unsplash.com/user/willianjusten/300x140',
+    price: 'R$ 235,00'
   }
 } as Meta
 
