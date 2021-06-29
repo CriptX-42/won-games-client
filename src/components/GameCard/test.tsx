@@ -12,19 +12,23 @@ const props = {
 }
 
 describe('<GameCard />', () => {
-  it('should render the heading', () => {
+  t('should render correctly', () => {
+    renderWithTheme(<GameCard {...props} />)
+
     expect(
       screen.getByRole('heading', { name: props.title })
     ).toBeInTheDocument()
+
     expect(
       screen.getByRole('heading', { name: props.developer })
     ).toBeInTheDocument()
-    expect(
-      screen.getByRole('heading', { name: props.price })
-    ).toBeInTheDocument()
-    expect(
-      screen.getByRole(screen.getByLabelText(/add to wishlist/i))
-    ).toBeInTheDocument()
+
+    expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
+      'src',
+      props.img
+    )
+
+    expect(screen.getByLabelText(/add to wishlist/i)).toBeInTheDocument()
   })
 
   it('should render price in label', () => {
