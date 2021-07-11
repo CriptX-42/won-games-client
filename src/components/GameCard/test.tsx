@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 import theme from 'styles/theme'
 
@@ -54,6 +54,20 @@ describe('<GameCard />', () => {
 
   it('should render a field Favorite icon when Favorite is true', () => {
     renderWithTheme(<GameCard {...props} favorite />)
+
+    expect(screen.getByLabelText(/remove from wishlist/i)).toBeInTheDocument()
+  })
+
+  it('should call onFav method when favorite is clicked', () => {
+    //? Isso é um spy
+    const onFav = jest.fn()
+
+    renderWithTheme(<GameCard {...props} favorite onFav={onFav} />)
+
+    //? O Zero é o primeiro botão do GameCard
+    fireEvent.click(screen.getAllByRole('button')[0])
+
+    expect(onFav).toBeCalled()
 
     expect(screen.getByLabelText(/remove from wishlist/i)).toBeInTheDocument()
   })
