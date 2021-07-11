@@ -12,7 +12,7 @@ const props = {
 }
 
 describe('<GameCard />', () => {
-  t('should render correctly', () => {
+  it('should render correctly', () => {
     renderWithTheme(<GameCard {...props} />)
 
     expect(
