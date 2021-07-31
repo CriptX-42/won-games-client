@@ -1,8 +1,17 @@
+import SlickSlider, { Settings } from 'react-slick'
+
 import * as S from './styles'
 
-const Slider = () => (
+export type SliderSettings = Settings
+
+export type SliderProps = {
+  children: React.node
+  settings: SliderSettings
+}
+
+const Slider = ({ children, settings }) => (
   <S.Wrapper>
-    <h1>Slider</h1>
+    <Slider {...settings}>{children}</Slider>
   </S.Wrapper>
 )
 
