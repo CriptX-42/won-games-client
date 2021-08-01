@@ -1,5 +1,3 @@
-import 'match-media-mock'
-import { renderWithTheme } from 'utils/tests/helpers'
 import { Story, Meta } from '@storybook/react/types-6-0'
 import BannerSlider, { BannerSliderProps } from '.'
 
