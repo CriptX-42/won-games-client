@@ -43,7 +43,7 @@ const settings: SliderSettings = {
     }
   ],
   nextArrow: <ArrowRight aria-label="next games" />,
-  prevArrow: <ArrowLeft aria-label="previews games" />
+  prevArrow: <ArrowLeft aria-label="previous games" />
 }
 
 const GameCardSlider = ({ items, color = 'black' }: GameCardSliderProps) => (
