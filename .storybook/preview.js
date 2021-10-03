@@ -6,6 +6,24 @@ import theme from 'styles/theme'
 
 addDecorator(withNextRouter())
 
+// .storybook/preview.js
+
+export const parameters = {
+  backgrounds: {
+    default: 'won-light',
+    values: [
+      {
+        name: 'won-white',
+        value: theme.colors.white
+      },
+      {
+        name: 'won-dark',
+        value: theme.colors.mainBg
+      }
+    ]
+  }
+}
+
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
