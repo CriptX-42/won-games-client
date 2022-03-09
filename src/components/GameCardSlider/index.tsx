@@ -4,10 +4,11 @@ import Slider, { SliderSettings } from 'components/Slider'
 import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/ArrowBackIos'
 import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos'
 
-type GameCardSliderProps = {
+export type GameCardSliderProps = {
   items: GameCardProps[]
   color?: 'white' | 'black'
 }
+
 const settings: SliderSettings = {
   slidesToShow: 4,
   infinite: false,
