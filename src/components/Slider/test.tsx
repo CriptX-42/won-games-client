@@ -22,3 +22,4 @@ describe('<Slider />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+})
