@@ -53,11 +53,37 @@ describe('<Button />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
-  it('should render botton as a link', () => {
+  it('should render a minimal version', () => {
     renderWithTheme(
-      <Button as="a" href="/link">Buy now</Button>
+      <Button minimal icon={<AddShoppingCart data-testid="icon" />}>
+        Buy now
+      </Button>
     )
 
-    expect(screen.getByRole('link', { name: /Buy now/i })).toHaveAttribute('href', '/link')
+    expect(screen.getByRole('button', { name: /buy now /i })).toHaveStyle({
+      background: 'none',
+      color: '#F231A5'
+    })
+    expect(screen.getByRole('button', { name: /buy now /i })).toHaveStyleRule(
+      'background',
+      'none',
+      {
+        modifier: ':hover'
+      }
+    )
+    expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+
+  it('should render botton as a link', () => {
+    renderWithTheme(
+      <Button as="a" href="/link">
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('link', { name: /Buy now/i })).toHaveAttribute(
+      'href',
+      '/link'
+    )
   })
 })
