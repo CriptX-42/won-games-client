@@ -45,5 +45,18 @@ describe('<Checkbox />', () => {
     await waitFor(() => {
       expect(onCheck).toHaveBeenCalledTimes(1)
     })
+
+    expect(onCheck).toHaveBeenCalledWith(true)
+  })
+
+  it('should dispatch onCheck when status chenges', async () => {
+    const onCheck = jest.fn()
+
+    renderWithTheme(<Checkbox label="checkbox" onCheck={onCheck} isChecked />)
+
+    await waitFor(() => {
+      expect(onCheck).toHaveBeenCalledTimes(1)
+    })
+    expect(onCheck).toHaveBeenCalledWith(false)
   })
 })
