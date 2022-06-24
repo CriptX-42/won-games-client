@@ -19,7 +19,7 @@ export const wrapperModifiers = {
   `,
 
   huge: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.large};
+    font-size: ${theme.font.sizes.huge};
   `,
 
   lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
