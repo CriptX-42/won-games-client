@@ -15,7 +15,7 @@ export default {
   ],
   parameters: {
     layout: 'fullscreen',
-    background: {
+    backgrounds: {
       default: 'won-dark'
     }
   }
@@ -27,4 +27,31 @@ Default.args = {
   title: 'Most popular',
   highlight: highlightMock,
   games: gamesMock
+}
+
+export const WithuntTitle: Story<ShowcaseProps> = (args) => (
+  <Showcase {...args} />
+)
+
+WithuntTitle.args = {
+  highlight: highlightMock,
+  games: gamesMock
+}
+
+export const WithuntHighlight: Story<ShowcaseProps> = (args) => (
+  <Showcase {...args} />
+)
+
+WithuntHighlight.args = {
+  title: 'Most popular',
+  games: gamesMock
+}
+
+export const WithuntGames: Story<ShowcaseProps> = (args) => (
+  <Showcase {...args} />
+)
+
+WithuntGames.args = {
+  title: 'Most popular',
+  highlight: highlightMock
 }
