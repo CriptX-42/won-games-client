@@ -1,12 +1,14 @@
 import { render, screen } from '@testing-library/react'
 
-import GameDatails from '.'
+import GameDetails from '.'
 
-describe('<GameDatails />', () => {
+describe('<GameDetails />', () => {
   it('should render the heading', () => {
-    const { container } = render(<GameDatails />)
+    const { container } = render(<GameDetails />)
 
-    expect(screen.getByRole('heading', { name: /GameDatails/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /GameDetails/i })
+    ).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
   })
