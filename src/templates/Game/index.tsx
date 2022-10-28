@@ -2,12 +2,12 @@ import Base from 'templates/Base'
 
 import GameInfo, { GameInfoProps } from 'components/GameInfo'
 import Gallery, { GalleryImageProps } from 'components/Gallery'
-
-import * as S from './styles'
 import TextContent from 'components/TextContent'
+import Showcase from 'components/Showcase'
 import { GameCardProps } from 'components/GameCard'
 import { HighlightProps } from 'components/Highlight'
-import Showcase from 'components/Showcase'
+
+import * as S from './styles'
 import GameDetails, { GameDetailsProps } from 'components/GameDatails'
 
 export type GameTemplateProps = {
@@ -52,7 +52,7 @@ const Game = ({
       </S.SectionGameDetails>
 
       <Showcase
-        title="Upcomming"
+        title="Upcoming"
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
