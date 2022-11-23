@@ -7,8 +7,6 @@ import GameCard, { GameCardProps } from 'components/GameCard'
 import { HighlightProps } from 'components/Highlight'
 import { Grid } from 'components/Grid'
 
-import * as S from './styles'
-
 export type WishlistTemplateProps = {
   games?: GameCardProps[]
   recommendedGames: GameCardProps[]
