@@ -1,34 +1,26 @@
-import 'match-media-mock'
-import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import Wishlist from '.'
+import { Divider } from '.'
 
-import gamesMock from 'components/GameCardSlider/mock'
-import highlightMock from 'components/Highlight/mock'
-
-const props = {
-  games: gamesMock,
-  recommendedHighlight: highlightMock,
-  recommendedGames: gamesMock
-}
-
-jest.mock('components/Showcase', () => ({
-  __esModule: true,
-  default: function Mock() {
-    return <div data-testid="Mock Showcase" />
-  }
-}))
-
-describe('<Wishlist />', () => {
+describe('<Divider />', () => {
   it('should render correctly', () => {
-    renderWithTheme(<Wishlist {...props} />)
+    const { container } = renderWithTheme(<Divider />)
 
-    expect(
-      screen.getByRole('heading', { name: /wishlist/i })
-    ).toBeInTheDocument()
-
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(6)
-    expect(screen.getByTestId('Mock Showcase')).toBeInTheDocument()
+    expect(container.firstChild).toMatchInlineSnapshot(`
+      .c0 {
+        margin: 5.6rem auto 3.2rem;
+        height: 0.1rem;
+        background: rgba(181,181,181,0.3);
+        border: 0;
+      }
+      @media (min-width:768px) {
+        .c0 {
+          margin: calc(5.6rem * 2.5) auto 5.6rem;
+        }
+      }
+      <hr
+        class="c0"
+      />
+    `)
   })
 })
