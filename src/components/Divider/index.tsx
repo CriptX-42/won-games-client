@@ -1,9 +1,14 @@
-import * as S from './styles'
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
-const Divider = () => (
-  <S.Wrapper>
-    <h1>Divider</h1>
-  </S.Wrapper>
-)
-
-export default Divider
+export const Divider = styled.hr`
+  ${({ theme }) => css`
+    margin: ${theme.spacings.xxlarge} auto ${theme.spacings.medium};
+    height: 0.1rem;
+    background: rgba(181, 181, 181, 0.3);
+    border: 0;
+    ${media.greaterThan('medium')`
+      margin: calc(${theme.spacings.xxlarge} * 2.5) auto ${theme.spacings.xxlarge};
+    `}
+  `}
+`
