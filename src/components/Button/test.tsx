@@ -4,7 +4,7 @@ import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart
 
 import Button from '.'
 
-xdescribe('<Button />', () => {
+describe('<Button />', () => {
   it('should render the medium size by default', () => {
     const { container } = renderWithTheme(<Button>Buy now</Button>)
 
@@ -55,33 +55,45 @@ xdescribe('<Button />', () => {
 
   it('should render a minimal version', () => {
     renderWithTheme(
-      <Button minimal icon={<AddShoppingCart data-testid="icon" />}>
+      <Button icon={<AddShoppingCart data-testid="icon" />} minimal>
         Buy now
       </Button>
     )
 
-    expect(screen.getByRole('button', { name: /buy now /i })).toHaveStyle({
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
       background: 'none',
       color: '#F231A5'
     })
-    expect(screen.getByRole('button', { name: /buy now /i })).toHaveStyleRule(
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
       'background',
       'none',
       {
         modifier: ':hover'
       }
     )
-    expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
-  it('should render botton as a link', () => {
+  it('should render a disabled Button', () => {
+    renderWithTheme(<Button disabled>Buy now</Button>)
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
+      'cursor',
+      'not-allowed',
+      {
+        modifier: ':disabled'
+      }
+    )
+  })
+
+  it('should render Button as a link', () => {
     renderWithTheme(
       <Button as="a" href="/link">
         Buy now
       </Button>
     )
 
-    expect(screen.getByRole('link', { name: /Buy now/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
       '/link'
     )
