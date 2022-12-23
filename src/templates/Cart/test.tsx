@@ -4,8 +4,8 @@ import { renderWithTheme } from 'utils/tests/helpers'
 
 import gamesMock from 'components/GameCardSlider/mock'
 import highlightMock from 'components/Highlight/mock'
-import cardsMock from 'components/PaymentOptions/mock'
 import itemsMock from 'components/CardList/mock'
+import cardsMock from 'components/PaymentOptions/mock'
 
 import Cart from '.'
 
@@ -28,6 +28,13 @@ jest.mock('components/Showcase', () => ({
   __esModule: true,
   default: function Mock() {
     return <div data-testid="Mock Showcase" />
+  }
+}))
+
+jest.mock('components/CartList', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock Cart" />
   }
 }))
 
