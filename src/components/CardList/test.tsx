@@ -4,7 +4,7 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import CartList from '.'
 import mockItems from './mock'
 
-describe('<CartList />', () => {
+fdescribe('<CartList />', () => {
   it('should render the cart list', () => {
     const { container } = renderWithTheme(
       <CartList items={mockItems} total="R$ 330,00" />
@@ -14,5 +14,11 @@ describe('<CartList />', () => {
     expect(screen.getByText('R$ 330,00')).toHaveStyle({ color: '#F231A5' })
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should render the button', () => {
+    renderWithTheme(<CartList items={mockItems} total="R$ 330,00" hasButton />)
+
+    expect(screen.getByText(/buy it now/i)).toBeInTheDocument()
   })
 })
