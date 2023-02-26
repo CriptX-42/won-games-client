@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import items from 'components/CartList/mock'
+import items from 'components/CardList/mock'
 
 import CartDropdown from '.'
 
