@@ -8,7 +8,7 @@ export default {
   component: CartDropdown,
   args: {
     items,
-    total: 'R$: 300,00'
+    total: 'R$ 300,00'
   },
   parameters: {
     backgrounds: {
@@ -20,5 +20,11 @@ export default {
 export const Default: Story<CartDropdownProps> = (args) => (
   <div style={{ maxWidth: '98%', display: 'flex', justifyContent: 'flex-end' }}>
     <CartDropdown {...args} />
+  </div>
+)
+
+export const Empty: Story<CartDropdownProps> = () => (
+  <div style={{ maxWidth: '98%', display: 'flex', justifyContent: 'flex-end' }}>
+    <CartDropdown />
   </div>
 )
