@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import CartDropdown, { CartDropdownProps } from '.'
 
 import items from 'components/CardList/mock'
+import CartDropdown, { CartDropdownProps } from '.'
 
 export default {
   title: 'CartDropdown',
