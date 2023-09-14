@@ -6,7 +6,7 @@ import { css } from 'styled-components'
 import ExploreSidebar from '.'
 import { Overlay } from './styles'
 
-import items from './mock'
+import items from './mock.ts'
 
 describe('<ExploreSidebar />', () => {
   it('should render headings', () => {
